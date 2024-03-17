@@ -1,0 +1,26 @@
+<%- include('partials/header.ejs'); -%>
+<div class="container">
+    <div class="d-flex justify-content-center align-items-center pt-4 ">
+<div class="divNew pt-2">
+    <form action="/new" method="post">
+    <label for="bookName">Book name:</label>
+<input type="text" name="bookName" placeholder="Enter book name">
+    <label for="author">Author:</label>
+<input type="text" name="author" placeholder="Enter author name">
+    <label for="isbn">ISBN of book:</label>
+<input type="text" name="isbn">
+    <label for="rating">Rating(1 to 10):</label>
+<input type="number" name="rating">
+    <label for="review">Review:</label>
+<input type="text" name="review" placeholder="Write your review here">
+    <label for="date">Date of finishing the book: </label>
+<input type="datetime-local" name="date">
+
+    <button type="submit" class="createButton">Create</button>
+</form>
+</div>
+</div>
+</div>
+
+
+<%- include('partials/footer.ejs'); -%>

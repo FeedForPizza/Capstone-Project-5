@@ -1,0 +1,45 @@
+<%- include('partials/header.ejs'); -%>
+    <div class="container">
+
+    <div class="d-flex justify-content-center py-3"><h1>Reviews of Read Books</h1></div>
+
+
+    <div class="indexDiv">
+        
+        <div class="bookDiv">
+            <% booksReviews.forEach(book => { %>    
+                <!-- <img src="https://covers.openlibrary.org/b/ISBN/<%= book.isbn %>-M.jpg" alt="Book cover"> -->
+                <h2 name="bookID"><%= book.id %></h2>
+                <h3><%= book.title %></h3>
+                <h4><%= book.author %></h4>
+                <p class="greyed">Date read: <%= book.date_read.toISOString().slice(0,10) %> Rating: <%= book.rating %></p>
+                <p><%= book.review %></p>
+                <div class="d-flex justify-content-end">
+                    <form action="/delete" method="post">
+                        <input type="number" value="<%= book.id %>" name="deleteID"  hidden>
+                    <button class="deleteBtn">Detele</button>
+                </form>
+                <form action="/edit" method="get">
+                    <input type="number" value="<%= book.id %>" name="editID" hidden>
+                    <button class="saveButton">Edit</button>
+                </form>
+                </div>
+                
+            <% }); %>
+        </div>
+        <form action="/add" method="get">
+            <button class="addButton">Add new</button>
+        </form> 
+        <form action="/recency" method="get">
+            <button class="recencyButton">Sort by recency</button>
+        </form>
+        <form action="/rating" method="get">
+            <button class="ratingButton">Sort by rating</button>
+        </form>
+    </div>
+   
+            
+        
+    </table>
+    </div>
+    <%- include('partials/footer.ejs'); -%>

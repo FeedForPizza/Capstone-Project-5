@@ -1,0 +1,28 @@
+<%- include('partials/header.ejs') %>
+<div class="container">
+    <div class="d-flex justify-content-center align-items-center pt-4 ">
+        <div class="divEdit pt-2">
+
+    <form action="/editItem" method="post">
+    <input type="number" value="<%= editBook[0].id %>" name="editID" hidden>
+    <label >Book name:</label> 
+<input type="text" name="bookName" placeholder="Enter book name" value="<%= editBook[0].title %>"> 
+    <label >Author:</label> 
+<input type="text" name="author" placeholder="Enter author name" value="<%= editBook[0].author %>">
+    <label >ISBN of book:</label>
+<input type="text" name="isbn" value="<%= editBook[0].isbn %>">
+    <label >Rating(1 to 10):</label>
+<input type="number" name="rating" value="<%= editBook[0].rating %>">
+    <label >Review:</label>
+<input type="text" name="review" placeholder="Write your review here" value="<%= editBook[0].review %>">
+
+
+        <button type="submit" class="saveButton">Save</button>
+</form>
+
+</div>
+    </div>
+
+</div>
+
+<%- include('partials/footer.ejs') %>

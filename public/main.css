@@ -1,0 +1,81 @@
+body{
+    background-color: antiquewhite;
+    font-family: "Roboto", sans-serif;
+}
+.divEdit{
+    text-align: center;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5%;
+    height: 500px;
+    width: 40%;
+}
+.divNew{
+    text-align: center;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5%;
+    height: 580px;
+    width: 40%;
+}
+.createButton{
+    border: none;
+    border-radius: 10%;
+    background-color: rgb(87, 87, 248);
+    padding: 10px;
+}
+.saveButton{
+    border: none;
+    border-radius: 10%;
+    background-color: rgb(87, 87, 248);
+    padding: 10px 20px 10px 20px;
+
+}
+.recencyButton{
+    background-color: rgb(220, 0, 173);
+    padding: 10px 20px 10px 20px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 10%;
+    
+}
+.ratingButton{
+    background-color: rgb(198, 220, 0);
+    padding: 10px 20px 10px 20px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 10%;
+    
+}
+
+
+.indexDiv{
+    
+    display: flex;
+    justify-content: center;
+}
+.bookDiv{
+    width:40%;
+}
+.deleteBtn{
+    border: none;
+    border-radius: 10%;
+    background-color: rgb(180, 1, 1);
+    padding: 10px 20px 10px 20px;
+    margin-right: 20px;
+}
+.Cover{
+    float: left;
+}
+.addButton{
+    background-color: rgb(4, 174, 4);
+    padding: 10px 20px 10px 20px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 10%;
+    float: right;
+}
+input{
+    width: 50ch; 
+    border-radius: 10px; 
+    padding: 8px;
+    margin: 8px;
+}
